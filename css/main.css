@@ -240,7 +240,7 @@ footer .inner-footer a {
   margin-bottom: 0.5rem; }
 
 .hero {
-  background: url(/img/hero_bg.jpg);
+  background: url(/amyris-test/img/hero_bg.jpg);
   margin-top: -7rem;
   background-size: cover;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5); }
@@ -338,7 +338,7 @@ footer .inner-footer a {
   margin-top: 2rem; }
 
 .contact-form {
-  background: url(/img/hero_bg.jpg); }
+  background: url(/amyris-test/img/hero_bg.jpg); }
 
 .contact-form .inner-contact {
   padding: 4rem 1rem;
