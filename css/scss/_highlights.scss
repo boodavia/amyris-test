@@ -1,0 +1,43 @@
+
+.highlights{
+    color: $dark-grey;
+}
+
+.highlights .inner-highlights {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include respond-to($desktop) {
+        flex-direction: row;
+    }
+}
+
+.highlights .inner-highlights div {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 3rem;
+    @include respond-to($desktop) {
+        width: 30%;
+        margin: 0;
+    }
+}
+
+.highlights .inner-highlights div:last-of-type {margin-bottom: 0;}
+
+.highlights .inner-highlights div p{
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+.highlights .inner-highlights div a{ 
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    background: $orange;
+    font-size: 2rem;
+}
+
+.highlights .inner-highlights div a:hover {
+    background: lighten($orange, 10%)
+}

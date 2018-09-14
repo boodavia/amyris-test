@@ -1,0 +1,25 @@
+.cta {
+    background: $orange;
+    text-align: center;
+}
+
+.cta .inner-cta {
+    padding: 4rem 1rem;
+}
+
+.cta .inner-cta .button {
+    margin-top: 2rem;
+}
+
+.contact-form {
+    background: url(/img/hero_bg.jpg);
+}
+
+.contact-form .inner-contact {
+    padding: 4rem 1rem;
+    max-width: 40rem;
+}
+
+.contact-form .inner-contact .button {
+    width: auto;
+}

@@ -1,0 +1,40 @@
+.blog-posts .post:nth-child(odd) {
+    background: $white;
+}
+
+.blog-posts .post .inner-post {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.blog-posts .post .inner-post .post-img img{
+    max-width: 100%;
+}
+
+@include respond-to($desktop) {
+    .blog-posts .post .inner-post {
+        flex-direction: row;
+        text-align: left;
+    }
+    .blog-posts .post .inner-post .post-text {
+        flex: 1;
+        padding:0 2rem;
+    }
+    
+    .blog-posts .post.post-left .inner-post {
+        flex-direction: row-reverse;
+    }
+    
+    .blog-posts .post .inner-post .post-img {
+        flex: 0 0 50%;
+    }
+    
+    .blog-posts .post.post-right .inner-post .post-img{
+        
+        text-align: right;
+    }
+}

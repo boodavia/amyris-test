@@ -1,0 +1,108 @@
+//colors
+$light-grey: #eee;
+$medium-grey: #999;
+$dark-grey: #333;
+$orange: #ed9914;
+$white: #fff;
+$green: #4f955a;
+
+//variable
+$base-duration: 500ms;
+
+body {
+    margin: 0;
+    font-family: $font-open;
+    font-size: 16px;
+    background: $light-grey;
+    color: $dark-grey;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+h1, h2, h3, h4 {
+    font-family: $font-abril;
+    margin: 0;
+    font-weight: 300;
+}
+
+h1 {font-size: 1.5rem;}
+h2 {font-size: 1.25rem;}
+h3 {font-size: 1rem;}
+h4 {
+    font-size: 2rem;
+    color: $white;
+    text-align: center;
+}
+
+@include respond-to($desktop) {
+    h1 {font-size: 3rem;}
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0
+}
+
+.button-row {
+    text-align: center;
+}
+
+input[type=text] {
+    border: 0.0625rem solid $light-grey;
+    background: $white;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+
+.dual-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dual-input input {
+    flex: 1;
+}
+
+.dual-input input:first-of-type {
+    margin-right: 1rem;
+}
+
+::-webkit-input-placeholder { color: $medium-grey; }
+::-moz-placeholder { color: $medium-grey; }
+:-ms-input-placeholder { color: $medium-grey; }
+
+.button {
+    border: none;
+    background: $dark-grey;
+    color: $white;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button:hover {
+    background: lighten($dark-grey, 10%);
+}
+
+.hide { opacity: 0; }
+
+.inner-wrapper {
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    @include respond-to($desktop) {
+        max-width: 64rem;
+    }
+}

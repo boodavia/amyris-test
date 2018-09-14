@@ -1,0 +1,166 @@
+header {
+    background: $dark-grey;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%);
+}
+
+header .inner-header {
+    height: 7rem;
+}
+
+header .inner-header .hamburger {
+    color: $white;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+    top: 0.75rem;
+    cursor: pointer;
+    z-index: 3;
+    @include respond-to($desktop) {
+        display: none;
+    }
+}
+
+//Header Navigation
+header .inner-header nav {
+    z-index: 3;
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+    right: -50vw;
+    background: $white;
+    transition: right 0.25s ease-in-out;
+    @include respond-to($desktop) {
+        transition: none;
+        position: absolute;
+        right: 0;
+        top: 2rem;
+        height: auto;
+        width: auto;
+        background: none;
+    }
+} 
+
+header .inner-header nav.open {
+    right: 0;
+}
+header .inner-header nav .close{
+    display: none;
+}
+
+header .inner-header nav.open .close{
+    color: $white;
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    transform: translateY(44vh);
+    cursor: pointer;
+    z-index: 3;
+    background: $dark-grey;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 3rem;
+    padding-top: 0.5rem;
+    box-sizing: border-box;
+    left: -1.25rem;
+    border: 0.0625rem solid #fff;
+    @include respond-to($desktop) {
+        display: none;
+    }
+}
+
+header .inner-header nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include respond-to($desktop) {
+        flex-direction: row;
+    }
+}
+
+header .inner-header nav ul li {
+    
+    @include respond-to($desktop) {
+        margin-left: 1rem;
+    }
+}
+
+@include respond-to(0, $desktop) {
+    header .inner-header nav ul {
+        margin-top: 2rem;
+    }
+    header .inner-header nav ul li {
+        padding: 1rem;
+        cursor: pointer;
+    }
+    header .inner-header nav ul li a{
+        color: $dark-grey;
+    }
+    header .inner-header nav ul li:hover {
+        background: $light-grey;
+    }
+    header .inner-header nav ul li:hover a{
+        color: $medium-grey
+    }
+}
+
+
+
+//Header Logo & Animation
+header .inner-header .logo {
+    position: relative;
+    display: inline-block;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+
+    @include respond-to($desktop) {
+        top: 1rem;
+        left: 1rem;
+        width: 5rem;
+        height: 5rem; 
+    }
+
+    @keyframes scale {
+        0%   { transform: scale(100); opacity: 0; }
+        50%  { transform: scale(0.2); }
+        70%  { transform: scale(1); }
+        90%  { transform: scale(0.7); }
+        100% { transform: scale(1);opacity: 1; }
+    }
+    
+}
+header .inner-header .logo img {
+    position: absolute;
+    transform: scale(1);
+    animation: scale $base-duration * 1.5 ease-in-out;
+}
+
+//Footer section
+
+footer {
+    background: $dark-grey;
+}
+
+footer .inner-footer {
+    padding: 2rem 1rem 1.5rem;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.75rem;
+
+    @include respond-to($desktop) {
+        flex-direction: row;
+    }
+}
+
+footer .inner-footer a{
+    margin-bottom: 0.5rem;
+}

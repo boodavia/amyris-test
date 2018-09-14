@@ -1,0 +1,13 @@
+$desktop: 64em; //1024px
+
+@mixin respond-to($min-width, $max-width: false) {
+    @media screen and (min-width: $min-width) {
+        @if $max-width {
+            @media (max-width: $max-width) {
+                @content;
+            }
+        } @else {
+            @content;
+        }
+    }
+}
